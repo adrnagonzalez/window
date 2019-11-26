@@ -3,7 +3,8 @@
   <head>
     <title> Adrian Gonzalez AR test</title>
     <meta name="AR Window" content="AR Window">
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
    
 
@@ -12,10 +13,12 @@
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs= "sourceType: webcam;">
       <a-assets timeout="10000">
-          <img id="video1" src="window/SR_AR_FINAL_2.mp4">
+          <video id="video1" autoplay loop="true" src="/vid.mp4"></video> 
       </a-assets>
-      <a-marker-camera preset="hiro"></a-marker-camera>
+      
     <a-box src="#video1" height="4" width="2" position="0 0 -10"rotation="0 0 0"></a-box>
+
+    <a-marker-camera preset="hiro"></a-marker-camera>
 
     </a-scene> 
    
